@@ -5,17 +5,132 @@
 }
 
 :root {
-  --very-dark-grayish-blue: hsl(217, 19%, 35%);
-  --desaturated-dark-blue: hsl(214, 17%, 51%);
-  --grayish-blue: hsl(212, 23%, 69%);
-  --light-grayish-blue: hsl(210, 46%, 95%);
+  --very-dark-grayish-blue: #48556a;
+  --desaturated-dark-blue: #6d7f97;
+  --grayish-blue: #9eafc2;
+  --light-grayish-blue: #ecf2f8;
 }
 
 body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-blue);
 }
 
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Container */
+.container {
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  width: 730px;
+  display: flex;
+}
+
+/* container img */
+.container-img {
+  width: 40%;
+}
+
+/* container-content */
+.container-content {
+  width: 60%;
+  background-color: #fff;
+  padding: 32px 40px;
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+}
+
+.container-content h3 {
+  color: var(--very-dark-grayish-blue);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+.light-para {
+  color: var(--grayish-blue);
+  margin: 12px 0 20px 0;
+}
+
+/* user-content */
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.michelle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user-name {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+}
+
+.user-name-date p:last-child {
+  color: var(--grayish-blue);
+}
+
+.share-svg {
+  background-color: var(--light-grayish-blue);
+  padding: 9px 9px 10px 9px;
+  border-radius: 50%;
+}
+
+.share-svg:active {
+  background-color: var(--desaturated-dark-blue);
+}
+
+.share-svg path:active {
+  fill: var(--light-grayish-blue);
+}
+
+@media screen and (max-width: 700px) {
+  .container-img {
+    width: 50%;
+  }
+
+  .container-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    width: 327px;
+    flex-direction: column;
+  }
+
+  .container-img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .container-content {
+    width: 100%;
+  }
+}
 /* .attribution {
     font-size: 11px;
     text-align: center;
